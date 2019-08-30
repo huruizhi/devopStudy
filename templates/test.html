@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></ul>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for obj in object_list %}
+        <li>{{ obj.username }} </li>
+    {% endfor %}
+</ul>
+
+<ul>
+    {% for p in paginator.page_range %}
+        {% if page_obj.number == p %}
+            <li><h1>{{ p }}</h1></li>
+        {% else %}
+            <li><a href="{% url 'dashboard:hello' %}?page={{ p }}">{{ p }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+</body>
+</html>

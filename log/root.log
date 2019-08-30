@@ -1,0 +1,238 @@
+[2019-08-28 07:19:41,566][Thread-2:123145440370688][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 32028]
+[2019-08-28 07:22:01,911][Thread-2:123145372803072][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 438]
+[2019-08-28 07:22:07,342][Thread-3:123145378058240][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello/1 HTTP/1.1" 200 438]
+[2019-08-28 07:22:10,765][Thread-4:123145372803072][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello/2 HTTP/1.1" 200 438]
+[2019-08-28 07:27:26,000][Thread-2:123145369010176][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=4 HTTP/1.1" 200 2956]
+[2019-08-28 07:49:48,211][Thread-2:123145429200896][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /dashboard/hello]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+[2019-08-28 07:49:53,220][Thread-2:123145443643392][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /dashboard/hello]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+[2019-08-28 07:49:53,323][Thread-2:123145443643392][task_id:django.server][basehttp.py:124][ERROR]["GET /dashboard/hello?page=4 HTTP/1.1" 500 127813]
+[2019-08-28 07:50:14,683][Thread-2:123145317363712][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=4 HTTP/1.1" 200 6853]
+[2019-08-28 07:50:16,594][Thread-3:123145322618880][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=13 HTTP/1.1" 200 6863]
+[2019-08-28 07:50:18,580][Thread-4:123145317363712][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=49 HTTP/1.1" 200 6863]
+[2019-08-28 07:50:21,980][Thread-5:123145322618880][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=89 HTTP/1.1" 200 6863]
+[2019-08-28 07:50:39,951][Thread-2:123145347043328][task_id:django.request][base.py:152][WARNING][Not Found: /dashboard/hello]
+[2019-08-28 07:50:39,953][Thread-2:123145347043328][task_id:django.server][basehttp.py:124][WARNING]["GET /dashboard/hello?page=89 HTTP/1.1" 404 1756]
+[2019-08-28 07:50:42,745][Thread-3:123145352298496][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 3237]
+[2019-08-28 07:50:46,525][Thread-4:123145347043328][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=15 HTTP/1.1" 200 3277]
+[2019-08-28 07:54:19,578][Thread-6:123145347043328][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=15 HTTP/1.1" 200 3048]
+[2019-08-28 07:54:58,555][Thread-2:123145520230400][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=15 HTTP/1.1" 200 4025]
+[2019-08-28 07:54:58,883][Thread-3:123145525485568][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=15 HTTP/1.1" 200 4025]
+[2019-08-28 07:54:59,085][Thread-4:123145520230400][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=15 HTTP/1.1" 200 4025]
+[2019-08-28 07:55:02,683][Thread-5:123145525485568][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=15 HTTP/1.1" 200 4025]
+[2019-08-28 07:57:55,366][Thread-2:123145366286336][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=15 HTTP/1.1" 200 4026]
+[2019-08-28 07:58:17,176][Thread-4:123145366286336][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 3986]
+[2019-08-28 07:58:31,880][Thread-2:123145318092800][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 3986]
+[2019-08-28 07:59:01,416][Thread-2:123145324032000][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 3996]
+[2019-08-28 07:59:01,940][Thread-3:123145329287168][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 3996]
+[2019-08-28 07:59:03,164][Thread-4:123145324032000][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 3996]
+[2019-08-28 07:59:03,519][Thread-5:123145329287168][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 3996]
+[2019-08-28 07:59:04,237][Thread-6:123145324032000][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 3996]
+[2019-08-28 07:59:04,958][Thread-7:123145329287168][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 3996]
+[2019-08-28 07:59:08,857][Thread-8:123145324032000][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=3 HTTP/1.1" 200 4006]
+[2019-08-28 07:59:10,738][Thread-9:123145329287168][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=4 HTTP/1.1" 200 4026]
+[2019-08-28 07:59:25,928][Thread-11:123145329287168][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=4 HTTP/1.1" 200 4028]
+[2019-08-28 07:59:28,655][Thread-12:123145324032000][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4038]
+[2019-08-28 07:59:55,111][Thread-14:123145324032000][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4036]
+[2019-08-28 07:59:55,400][Thread-15:123145329287168][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4036]
+[2019-08-28 07:59:56,225][Thread-16:123145324032000][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4036]
+[2019-08-28 07:59:57,195][Thread-17:123145329287168][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4036]
+[2019-08-28 07:59:57,564][Thread-18:123145324032000][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4036]
+[2019-08-28 08:00:14,048][Thread-20:123145324032000][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4036]
+[2019-08-28 08:00:14,382][Thread-21:123145329287168][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4036]
+[2019-08-28 08:00:15,664][Thread-22:123145324032000][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4036]
+[2019-08-28 08:00:16,266][Thread-23:123145329287168][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4036]
+[2019-08-28 08:00:16,651][Thread-24:123145324032000][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4036]
+[2019-08-28 08:13:37,587][Thread-2:123145385209856][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 4038]
+[2019-08-28 08:13:55,833][Thread-2:123145443930112][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 3996]
+[2019-08-28 08:13:56,193][Thread-3:123145449185280][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 3996]
+[2019-08-28 08:13:57,756][Thread-4:123145443930112][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=16 HTTP/1.1" 200 3996]
+[2019-08-28 08:42:24,673][Thread-2:123145429000192][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /dashboard/hello]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard.hello' not found. 'dashboard.hello' is not a valid view function or pattern name.
+[2019-08-28 08:42:25,085][Thread-2:123145429000192][task_id:django.server][basehttp.py:124][ERROR]["GET /dashboard/hello HTTP/1.1" 500 151073]
+[2019-08-28 08:58:19,803][Thread-2:123145323806720][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 3957]
+[2019-08-28 08:58:20,254][Thread-3:123145329061888][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 3957]
+[2019-08-28 08:58:22,482][Thread-4:123145323806720][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=22 HTTP/1.1" 200 3996]
+[2019-08-28 08:58:27,866][Thread-5:123145329061888][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=27 HTTP/1.1" 200 3996]
+[2019-08-28 08:59:31,687][Thread-7:123145323806720][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=28 HTTP/1.1" 200 3996]
+[2019-08-28 08:59:34,005][Thread-8:123145329061888][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=33 HTTP/1.1" 200 3996]
+[2019-08-29 07:14:32,587][Thread-2:123145580556288][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /dashboard/hello]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() takes 1 positional argument but 2 were given
+[2019-08-29 07:14:32,713][Thread-2:123145580556288][task_id:django.server][basehttp.py:124][ERROR]["GET /dashboard/hello HTTP/1.1" 500 71684]
+[2019-08-29 07:15:26,204][Thread-4:123145580556288][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /dashboard/hello]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() takes 1 positional argument but 2 were given
+[2019-08-29 07:15:26,327][Thread-4:123145580556288][task_id:django.server][basehttp.py:124][ERROR]["GET /dashboard/hello HTTP/1.1" 500 71819]
+[2019-08-29 07:15:30,604][Thread-2:123145574297600][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /dashboard/hello]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/gitlab/devopStudy/dashboard/views.py", line 57, in get
+    return JsonResponse(queryset, safe=False)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/http/response.py", line 530, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/serializers/json.py", line 124, in default
+    return super(DjangoJSONEncoder, self).default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'QuerySet' is not JSON serializable
+[2019-08-29 07:15:30,713][Thread-2:123145574297600][task_id:django.server][basehttp.py:124][ERROR]["GET /dashboard/hello HTTP/1.1" 500 116963]
+[2019-08-29 07:17:45,513][Thread-2:123145317326848][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /dashboard/hello]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/apple/gitlab/devopStudy/dashboard/views.py", line 58, in get
+    return JsonResponse(serialize('json', queryset), safe=False)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/serializers/__init__.py", line 129, in serialize
+    s.serialize(queryset, **options)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/serializers/base.py", line 84, in serialize
+    concrete_model = obj._meta.concrete_model
+AttributeError: 'dict' object has no attribute '_meta'
+[2019-08-29 07:17:45,603][Thread-2:123145317326848][task_id:django.server][basehttp.py:124][ERROR]["GET /dashboard/hello HTTP/1.1" 500 90290]
+[2019-08-29 07:18:10,654][Thread-2:123145490083840][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 69673]
+[2019-08-29 07:18:42,314][Thread-2:123145542082560][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 641]
+[2019-08-29 07:25:17,307][Thread-2:123145319194624][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 700]
+[2019-08-29 07:25:31,877][Thread-4:123145319194624][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17&per_page=1 HTTP/1.1" 200 67]
