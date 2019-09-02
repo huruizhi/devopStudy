@@ -582,3 +582,159 @@ AttributeError: 'dict' object has no attribute '_meta'
 [2019-08-30 10:24:12,100][Dummy-1:123145467219968][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" LIMIT 21; args=()]
 [2019-08-30 10:24:19,768][Dummy-1:123145467219968][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" LIMIT 21; args=()]
 [2019-08-30 10:24:26,130][Dummy-1:123145467219968][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" LIMIT 21; args=()]
+[2019-09-02 01:08:19,480][Dummy-1:123145534779392][task_id:django.db.backends][utils.py:91][DEBUG][(0.006) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None]
+[2019-09-02 01:08:19,486][Dummy-1:123145534779392][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()]
+[2019-09-02 01:09:17,030][Dummy-1:123145401917440][task_id:django.db.backends][utils.py:91][DEBUG][(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None]
+[2019-09-02 01:09:17,034][Dummy-1:123145401917440][task_id:django.db.backends][utils.py:91][DEBUG][(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()]
+[2019-09-02 01:09:25,703][Thread-2:123145407172608][task_id:django.request][base.py:152][WARNING][Not Found: /idc]
+[2019-09-02 01:09:54,139][Thread-3:123145407172608][task_id:django.request][base.py:152][WARNING][Not Found: /idc]
+[2019-09-02 01:09:59,289][Thread-5:123145407172608][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:10:01,729][Thread-6:123145412427776][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-09-02 01:11:17,331][MainThread:140734853596608][task_id:django.db.backends][utils.py:91][DEBUG][(0.004) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" LIMIT 21; args=()]
+[2019-09-02 01:11:17,388][Dummy-1:123145411538944][task_id:django.db.backends][utils.py:91][DEBUG][(0.001) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" LIMIT 21; args=()]
+[2019-09-02 01:12:01,001][Dummy-1:123145411538944][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" LIMIT 21; args=()]
+[2019-09-02 01:12:09,534][Dummy-1:123145411538944][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" LIMIT 21; args=()]
+[2019-09-02 01:12:09,544][Dummy-1:123145411538944][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" LIMIT 21; args=()]
+[2019-09-02 01:12:16,034][Dummy-1:123145411538944][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" LIMIT 21; args=()]
+[2019-09-02 01:12:16,051][Dummy-1:123145411538944][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" LIMIT 21; args=()]
+[2019-09-02 01:12:16,059][Dummy-1:123145411538944][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" LIMIT 21; args=()]
+[2019-09-02 01:12:23,070][MainThread:140734853596608][task_id:django.db.backends][utils.py:91][DEBUG][(0.001) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc"; args=()]
+[2019-09-02 01:13:48,130][Thread-7:123145407172608][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:13:49,941][Dummy-1:123145394233344][task_id:django.db.backends][utils.py:91][DEBUG][(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None]
+[2019-09-02 01:13:49,945][Dummy-1:123145394233344][task_id:django.db.backends][utils.py:91][DEBUG][(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()]
+[2019-09-02 01:13:50,472][Thread-2:123145399488512][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:13:54,182][Thread-3:123145404743680][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/1/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:15:25,338][Dummy-1:123145415131136][task_id:django.db.backends][utils.py:91][DEBUG][(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None]
+[2019-09-02 01:15:25,342][Dummy-1:123145415131136][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()]
+[2019-09-02 01:15:25,708][Thread-2:123145420386304][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/1/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:15:36,724][Dummy-1:123145386094592][task_id:django.db.backends][utils.py:91][DEBUG][(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None]
+[2019-09-02 01:15:36,729][Dummy-1:123145386094592][task_id:django.db.backends][utils.py:91][DEBUG][(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()]
+[2019-09-02 01:15:39,268][Thread-2:123145391349760][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/1/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:15:40,810][Thread-3:123145396604928][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/1/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`

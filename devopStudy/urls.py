@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from idc.views import IdcViewSetV7
+from users.views import UserViewset
+from rest_framework.routers import DefaultRouter
+
+
+route = DefaultRouter()
+route.register("idcs", IdcViewSetV7)
+route.register("users", UserViewset)
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url('^', include(route.urls))
 ]

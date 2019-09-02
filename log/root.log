@@ -236,3 +236,135 @@ AttributeError: 'dict' object has no attribute '_meta'
 [2019-08-29 07:18:42,314][Thread-2:123145542082560][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello HTTP/1.1" 200 641]
 [2019-08-29 07:25:17,307][Thread-2:123145319194624][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17 HTTP/1.1" 200 700]
 [2019-08-29 07:25:31,877][Thread-4:123145319194624][task_id:django.server][basehttp.py:124][INFO]["GET /dashboard/hello?page=17&per_page=1 HTTP/1.1" 200 67]
+[2019-09-02 01:09:25,703][Thread-2:123145407172608][task_id:django.request][base.py:152][WARNING][Not Found: /idc]
+[2019-09-02 01:09:25,706][Thread-2:123145407172608][task_id:django.server][basehttp.py:124][WARNING]["POST /idc HTTP/1.1" 404 2047]
+[2019-09-02 01:09:54,139][Thread-3:123145407172608][task_id:django.request][base.py:152][WARNING][Not Found: /idc]
+[2019-09-02 01:09:54,149][Thread-3:123145407172608][task_id:django.server][basehttp.py:124][WARNING]["GET /idc HTTP/1.1" 404 2046]
+[2019-09-02 01:09:59,275][Thread-4:123145412427776][task_id:django.server][basehttp.py:124][INFO]["GET /idc/idc HTTP/1.1" 301 0]
+[2019-09-02 01:09:59,289][Thread-5:123145407172608][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:09:59,446][Thread-5:123145407172608][task_id:django.server][basehttp.py:124][ERROR]["GET /idc/idc/ HTTP/1.1" 500 79936]
+[2019-09-02 01:10:01,729][Thread-6:123145412427776][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-09-02 01:10:01,730][Thread-6:123145412427776][task_id:django.server][basehttp.py:124][WARNING]["GET /favicon.ico HTTP/1.1" 404 2070]
+[2019-09-02 01:13:48,130][Thread-7:123145407172608][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:13:50,472][Thread-2:123145399488512][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:13:50,632][Thread-2:123145399488512][task_id:django.server][basehttp.py:124][ERROR]["GET /idc/idc/ HTTP/1.1" 500 79947]
+[2019-09-02 01:13:54,182][Thread-3:123145404743680][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/1/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:13:54,248][Thread-3:123145404743680][task_id:django.server][basehttp.py:124][ERROR]["GET /idc/idc/1/ HTTP/1.1" 500 79960]
+[2019-09-02 01:15:25,708][Thread-2:123145420386304][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/1/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:15:25,828][Thread-2:123145420386304][task_id:django.server][basehttp.py:124][ERROR]["GET /idc/idc/1/ HTTP/1.1" 500 79971]
+[2019-09-02 01:15:39,268][Thread-2:123145391349760][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/1/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:15:39,332][Thread-2:123145391349760][task_id:django.server][basehttp.py:124][ERROR]["GET /idc/idc/1/ HTTP/1.1" 500 80095]
+[2019-09-02 01:15:40,810][Thread-3:123145396604928][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /idc/idc/1/]
+Traceback (most recent call last):
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-02 01:15:40,869][Thread-3:123145396604928][task_id:django.server][basehttp.py:124][ERROR]["GET /idc/idc/1/ HTTP/1.1" 500 80095]

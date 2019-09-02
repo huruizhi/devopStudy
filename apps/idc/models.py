@@ -10,7 +10,6 @@ class Idc(models.Model):
     email = models.CharField("邮件地址", default="null", max_length=50)
     letter = models.CharField("IDC简称", max_length=5)
 
-
     def __str__(self):
         return self.name
 
