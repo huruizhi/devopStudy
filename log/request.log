@@ -738,3 +738,5 @@ Traceback (most recent call last):
   File "/Users/apple/.virtualenvs/devopsStudy/lib/python3.6/site-packages/rest_framework/views.py", line 414, in finalize_response
     % type(response)
 AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2019-09-03 08:23:15,997][MainThread:140734954419648][task_id:django.db.backends][utils.py:91][DEBUG][(0.008) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" WHERE "resources_idc"."id" = 4; args=(4,)]
+[2019-09-03 08:23:23,585][MainThread:140734954419648][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" WHERE "resources_idc"."id" = 4; args=(4,)]

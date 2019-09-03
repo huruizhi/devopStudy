@@ -18,12 +18,20 @@ from django.contrib import admin
 from idc.views import IdcViewSetV7
 from users.views import UserViewset
 from rest_framework.routers import DefaultRouter
-
+from rest_framework.documentation import include_docs_urls
+from rest_framework.schemas import get_schema_view
+from cabinet.views import CabinetViewSet
 
 route = DefaultRouter()
 route.register("idcs", IdcViewSetV7)
 route.register("users", UserViewset)
+route.register("cabinet", CabinetViewSet)
 
 urlpatterns = [
-    url('^', include(route.urls))
+    url('^', include(route.urls)),
+    url('^docs', include_docs_urls("运维平台接口文档")),
+    url('^openapi', get_schema_view(
+        title="Your Project",
+        description="API for all things"
+    ), name='openapi-schema'),
 ]

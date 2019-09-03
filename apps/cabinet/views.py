@@ -1,11 +1,9 @@
-from django.shortcuts import render
-# Create your views here.
-from .models import Idc
+from .models import Cabinet
 from rest_framework import viewsets
-from .serializers import IdcSerializer
+from .serializers import CabinetSerializer
 
 
-class IdcViewSetV7(viewsets.ModelViewSet):
+class CabinetViewSet(viewsets.ModelViewSet):
     """
     retrieve:
         返回指定Idc 信息
@@ -21,5 +19,5 @@ class IdcViewSetV7(viewsets.ModelViewSet):
         局部更新 Idc 信息
     """
 
-    queryset = Idc.objects.all()
-    serializer_class = IdcSerializer
+    queryset = Cabinet.objects.all()
+    serializer_class = CabinetSerializer

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'idc.apps.IdcConfig',
     'users.apps.UsersConfig',
+    'cabinet.apps.CabinetConfig',
     'rest_framework',
 ]
 
@@ -125,6 +126,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 BASE_LOG_DIR = os.path.join(BASE_DIR, "log")
+
+REST_FRAMEWORK = {
+  'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+}
 
 # LOGGING = {
 #     'version': 1,  # 保留字

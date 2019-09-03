@@ -27268,3 +27268,5 @@ Traceback (most recent call last):
     % type(response)
 AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
 [2019-09-02 01:15:40,869][Thread-3:123145396604928][task_id:django.server][basehttp.py:124][ERROR]["GET /idc/idc/1/ HTTP/1.1" 500 80095]
+[2019-09-03 08:23:15,997][MainThread:140734954419648][task_id:django.db.backends][utils.py:91][DEBUG][(0.008) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" WHERE "resources_idc"."id" = 4; args=(4,)]
+[2019-09-03 08:23:23,585][MainThread:140734954419648][task_id:django.db.backends][utils.py:91][DEBUG][(0.000) SELECT "resources_idc"."id", "resources_idc"."name", "resources_idc"."address", "resources_idc"."phone", "resources_idc"."email", "resources_idc"."letter" FROM "resources_idc" WHERE "resources_idc"."id" = 4; args=(4,)]
