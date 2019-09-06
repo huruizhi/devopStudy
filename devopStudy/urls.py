@@ -21,11 +21,21 @@ from rest_framework.routers import DefaultRouter
 from rest_framework.documentation import include_docs_urls
 from rest_framework.schemas import get_schema_view
 from cabinet.views import CabinetViewSet
+from servers.views import ManufacturerViewSet, ProductViewSet, ServerViewSet, ServerAutoReportViewSet, \
+    NetworkDeviceViewSet, IPViewSet
 
 route = DefaultRouter()
 route.register("idcs", IdcViewSetV7)
 route.register("users", UserViewset)
 route.register("cabinet", CabinetViewSet)
+route.register("Manufacturer", ManufacturerViewSet)
+route.register("Product", ProductViewSet)
+route.register("ServerAutoReport", ServerAutoReportViewSet)
+route.register("Server", ServerViewSet)
+route.register("NetworkDevice", NetworkDeviceViewSet)
+route.register("IP", IPViewSet)
+
+# route.register("Server", ServerViewSet)
 
 urlpatterns = [
     url('^', include(route.urls)),

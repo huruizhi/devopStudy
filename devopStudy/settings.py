@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,7 +40,10 @@ INSTALLED_APPS = [
     'idc.apps.IdcConfig',
     'users.apps.UsersConfig',
     'cabinet.apps.CabinetConfig',
+    'servers.apps.ServersConfig',
     'rest_framework',
+    'rest_framework_filters',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -128,7 +130,9 @@ STATIC_URL = '/static/'
 BASE_LOG_DIR = os.path.join(BASE_DIR, "log")
 
 REST_FRAMEWORK = {
-  'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'PAGE_SIZE': 10,
+    'DEFAULT_PAGINATION_CLASS': 'users.pagination.PagePagination'
 }
 
 # LOGGING = {
