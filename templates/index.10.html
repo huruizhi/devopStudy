@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="utils/vue.js"></script>
+<body>
+
+<div id="app">
+    <input type="text" v-model="value" @keyup.enter="add">
+    <ul v-for="todo in todos">
+        <todo-item :text="todo.text" @remove-item="deleteItem"></todo-item>
+    </ul>
+
+
+</div>
+</body>
+
+<script type="x-template" id="todo-template">
+  <li class="item">
+    this is a {{ text }} item.
+    <button @click="remove">remove</button>
+</li>
+</script>
+
+<script>
+    let TodoItem = {
+        props: ['text'],
+        template: '#todo-template',
+        methods: {
+            remove() {
+                console.log('son:' + this.text)
+                this.$emit('remove-item', this.text)
+            }
+        }
+    }
+
+    let app = new Vue({
+        el: "#app",
+        data() {
+            return {
+                value: "",
+                todos: [
+                    {text: 'aaa'},
+                    {text: 'bbb'},
+                    {text: 'ccc'},
+                    {text: 'ddd'}
+                ]
+            }
+        },
+        components: {
+          'todo-item': TodoItem
+        },
+        methods: {
+            deleteItem(todotext) {
+                console.log('father:' + todotext)
+                this.todos = this.todos.filter(function (todo) {
+                    return todo.text !== todotext
+                })
+            },
+            add() {
+                let isInValid = this.todos.some(todo => {
+                    return todo.text === this.value
+                })
+                if (isInValid){
+                    alert("重复了")
+                    return
+                }else {
+                    this.todos.push({text: this.value})
+                }
+            }
+        }
+
+    })
+</script>
+</html>

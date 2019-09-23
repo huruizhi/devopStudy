@@ -24,14 +24,15 @@ from cabinet.views import CabinetViewSet
 from servers.views import ManufacturerViewSet, ProductViewSet, ServerViewSet, ServerAutoReportViewSet, \
     NetworkDeviceViewSet, IPViewSet
 
+
 route = DefaultRouter()
 route.register("idcs", IdcViewSetV7)
 route.register("users", UserViewset)
 route.register("cabinet", CabinetViewSet)
 route.register("Manufacturer", ManufacturerViewSet)
 route.register("Product", ProductViewSet)
-route.register("ServerAutoReport", ServerAutoReportViewSet)
-route.register("Server", ServerViewSet)
+route.register("ServerAutoReport", ServerAutoReportViewSet, base_name='ServerAutoReport')
+route.register("Server", ServerViewSet, base_name='Server')
 route.register("NetworkDevice", NetworkDeviceViewSet)
 route.register("IP", IPViewSet)
 
@@ -39,6 +40,7 @@ route.register("IP", IPViewSet)
 
 urlpatterns = [
     url('^', include(route.urls)),
+    url('^api-auth', include('rest_framework.urls', namespace="rest_framework")),
     url('^docs', include_docs_urls("运维平台接口文档")),
     url('^openapi', get_schema_view(
         title="Your Project",

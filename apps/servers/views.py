@@ -5,6 +5,8 @@ from rest_framework import viewsets, generics, mixins
 from .serializers import ManufacturerSerializer, ProductSerializer, ServerSerializer, IPSerializer, \
     NetworkDeviceSerializers, ServerAutoReportSerializer
 
+from .filters import ServerFilter
+
 
 class ManufacturerViewSet(viewsets.ModelViewSet):
     """
@@ -46,18 +48,6 @@ class ProductViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
 
 
-class ServerViewSet(viewsets.ReadOnlyModelViewSet):
-    """
-    retrieve:
-        返回指定 服务器 信息
-    list:
-        返回 服务器 列表
-    """
-
-    queryset = Server.objects.all()
-    serializer_class = ServerSerializer
-
-
 class ServerAutoReportViewSet(viewsets.GenericViewSet,
                               mixins.CreateModelMixin):
     """
@@ -79,6 +69,9 @@ class NetworkDeviceViewSet(viewsets.ReadOnlyModelViewSet):
 
     queryset = NetworkDeviceModel.objects.all()
     serializer_class = NetworkDeviceSerializers
+    extra_perms_map = {
+        "GET": ["servers.view_networkDevice"]
+    }
 
 
 class IPViewSet(viewsets.ReadOnlyModelViewSet):
@@ -91,6 +84,9 @@ class IPViewSet(viewsets.ReadOnlyModelViewSet):
 
     queryset = IPModel.objects.all()
     serializer_class = IPSerializer
+    extra_perms_map = {
+        "GET": ["servers.view_IP"]
+    }
 
 
 class ServerViewSet(viewsets.ReadOnlyModelViewSet):
@@ -103,4 +99,6 @@ class ServerViewSet(viewsets.ReadOnlyModelViewSet):
 
     queryset = Server.objects.all()
     serializer_class = ServerSerializer
+    filter_fields = ("username", )
+    filter_class = ServerFilter
 

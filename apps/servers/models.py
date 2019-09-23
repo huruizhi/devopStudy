@@ -53,6 +53,9 @@ class Server(models.Model):
     class Meta:
         db_table = "resource_server"
         ordering = ["id"]
+        permissions = (
+            ("view_server", "can view server"),
+        )
 
 
 class NetworkDeviceModel(models.Model):
@@ -70,6 +73,9 @@ class NetworkDeviceModel(models.Model):
     class Meta:
         db_table = 'resource_network_device'
         ordering = ['id']
+        permissions = (
+            ("view_networkDevice", "can view networkDevice"),
+        )
 
 
 class IPModel(models.Model):
@@ -80,3 +86,8 @@ class IPModel(models.Model):
     netmask = models.CharField("子网掩码", max_length=15)
     device = models.ForeignKey(NetworkDeviceModel, verbose_name='所在网卡', help_text='所在网卡')
     remark = models.TextField('备注', help_text='备注', null=True, blank=True)
+
+    class Meta:
+        permissions = (
+            ("view_IP", "can view IP"),
+        )

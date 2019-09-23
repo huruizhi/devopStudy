@@ -23,3 +23,7 @@ class IdcViewSetV7(viewsets.ModelViewSet):
 
     queryset = Idc.objects.all()
     serializer_class = IdcSerializer
+
+    extra_perms_map = {
+        'GET': ['idc.view_idc'],
+    }

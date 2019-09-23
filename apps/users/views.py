@@ -3,7 +3,9 @@ from rest_framework import  viewsets
 # Create your views here.
 from django.contrib.auth import get_user_model
 from .serializers import UserSerializer
-from django_filters.rest_framework import DjangoFilterBackend
+from .filters import UserFilter
+
+from rest_framework.authentication import SessionAuthentication
 
 User = get_user_model()
 
@@ -19,5 +21,7 @@ class UserViewset(viewsets.ReadOnlyModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     # pagination_class = PagePagination
-    filter_backends = (DjangoFilterBackend, )
     filter_fields = ("username", )
+    filter_class = UserFilter
+    authentication_classes = (SessionAuthentication,)
+
